@@ -1,0 +1,217 @@
+/* Week 3 CSS assignment
+   Complete the required rules in this external stylesheet.
+   Use the exact values in the Student Assignment Guide. */
+
+/* 1. Universal box sizing */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+/* 2. Shared page background, body width, centring and typography */
+html,
+body {
+   background: #F4F7FA;
+}
+
+body {
+   width: 90%;
+   max-width: 1100px;
+   margin: 0 auto;
+   color: #1F2937;
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+   color: #1E3A5F;
+}
+
+main {
+   display: grid;
+   gap: 24px;
+}
+
+/* 3. Navigation list and link states */
+.nav-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 10px;
+   padding: 0;
+   list-style: none;
+}
+
+.nav-list a {
+   display: block;
+   padding: 8px 14px;
+   color: #2F6FED;
+   border-radius: 6px;
+   text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus,
+a[aria-current="page"] {
+   color: white;
+   background: #2F6FED;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+   outline: 3px solid #BFDBFE;
+   outline-offset: 2px;
+}
+
+/* 4. Cards, including the element with both card and featured classes */
+.card,
+.profile-card {
+   padding: 24px;
+   background: white;
+   border: 1px solid #CBD5E1;
+   border-radius: 10px;
+}
+
+.card.featured,
+.profile-card.featured {
+   border-top: 5px solid #2F6FED;
+}
+
+/* 5. Circular profile image and hover enlargement */
+.profile-card {
+   display: grid;
+   grid-template-columns: 200px 1fr;
+   gap: 24px;
+   align-items: start;
+}
+
+.profile-picture {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   object-fit: cover;
+   transition: width 0.25s, height 0.25s;
+}
+
+.profile-picture:hover {
+   width: 220px;
+   height: 220px;
+}
+
+/* 6. Short, centred, thick dashed horizontal rule */
+hr {
+   width: 60%;
+   margin: 24px auto;
+   border: 0;
+   border-top: 4px dashed #2F6FED;
+}
+
+/* 7. Interest and skills lists */
+.interest-list,
+.skills-list {
+   padding-left: 28px;
+}
+
+.interest-list {
+   list-style-type: square;
+}
+
+.skills-list {
+   list-style-type: circle;
+}
+
+.interest-list li,
+.skills-list li {
+   margin-bottom: 7px;
+}
+
+/* 8. Education table and overflow wrapper */
+.table-wrapper {
+   overflow-x: auto;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+caption {
+   padding-bottom: 8px;
+   text-align: left;
+}
+
+th,
+td {
+   padding: 12px;
+   border: 1px solid #CBD5E1;
+   text-align: left;
+}
+
+thead {
+   color: white;
+   background: #1E3A5F;
+}
+
+tbody tr:nth-child(even) {
+   background: #EAF0F6;
+}
+
+tbody tr:hover {
+   background: #DDE8F7;
+}
+
+/* 9. Contact form controls, focus states and button */
+label {
+   display: block;
+   margin-top: 14px;
+   font-weight: bold;
+}
+
+input,
+select,
+textarea {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #CBD5E1;
+   border-radius: 6px;
+   font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+   border-color: #2F6FED;
+}
+
+#message {
+   min-height: 140px;
+}
+
+button {
+   margin-top: 18px;
+   padding: 10px 18px;
+   color: white;
+   background: #2F6FED;
+   border: 0;
+   border-radius: 6px;
+   font: inherit;
+   cursor: pointer;
+}
+
+button:hover,
+button:focus {
+   background: #1D4ED8;
+}
+
+@media (max-width: 640px) {
+   .profile-card {
+      grid-template-columns: 1fr;
+   }
+}
