@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Learning Experience Questionnaire</title>
+</head>
+
+<body>
+  <!-- Updated page title and semantic structure start here -->
+
+  <header id="page-header">
+    <h1>Student Learning Experience Questionnaire</h1>
+
+    <nav aria-label="Page navigation">
+      <a href="#questionnaire">Questionnaire</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="page-main">
+    <section id="introduction">
+      <h2>Help us improve the course</h2>
+      <p>Complete this questionnaire about your learning experience.</p>
+    </section>
+
+    <section aria-labelledby="workshop-availability">
+      <h2 id="workshop-availability">Workshop availability</h2>
+
+      <table>
+        <caption>Workshop availability for the current term</caption>
+        <thead>
+          <tr>
+            <th scope="col">Workshop</th>
+            <th scope="col">Day</th>
+            <th scope="col">Time</th>
+            <th scope="col">Seats available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Semantic structure</th>
+            <td>Monday</td>
+            <td>14:00</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <th scope="row">Form controls</th>
+            <td>Wednesday</td>
+            <td>11:00</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row">Accessibility review</th>
+            <td>Friday</td>
+            <td>15:00</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </section>
+
+    <section id="questionnaire" aria-labelledby="questionnaire-heading">
+      <h2 id="questionnaire-heading">Student questionnaire</h2>
+
+      <form action="#" method="get">
+        <div>
+          <label for="full-name">Full name</label>
+          <input id="full-name" name="full-name" type="text" required>
+        </div>
+
+        <div>
+          <label for="email">University email</label>
+          <input id="email" type="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="student-id">Student ID</label>
+          <input id="student-id" type="text" name="student-id" required>
+        </div>
+
+        <div>
+          <label for="programme">Programme</label>
+          <input id="programme" type="text" name="programme" required>
+        </div>
+
+        <fieldset>
+          <legend>Year of study</legend>
+          <label><input type="radio" name="year" value="year-1" required> Year 1</label>
+          <label><input type="radio" name="year" value="year-2"> Year 2</label>
+          <label><input type="radio" name="year" value="year-3-plus"> Year 3 or later</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Which learning activities help you?</legend>
+          <label><input type="checkbox" name="activity" value="lectures"> Lectures</label>
+          <label><input type="checkbox" name="activity" value="seminars"> Seminars</label>
+          <label><input type="checkbox" name="activity" value="projects"> Projects</label>
+        </fieldset>
+
+        <div>
+          <label for="hours">Weekly independent-study hours</label>
+          <input id="hours" type="number" name="hours" min="0" max="80" step="1" required>
+        </div>
+
+        <div>
+          <label for="satisfaction">Overall satisfaction from 1 to 10</label>
+          <input id="satisfaction" type="number" name="satisfaction" min="1" max="10" step="1" required>
+        </div>
+
+        <div>
+          <label for="follow-up-date">Preferred follow-up date</label>
+          <input id="follow-up-date" type="date" name="follow-up-date" required>
+        </div>
+
+        <div>
+          <label for="follow-up-time">Preferred follow-up time</label>
+          <input id="follow-up-time" type="time" name="follow-up-time" required>
+        </div>
+
+        <div>
+          <label for="phone">Telephone number</label>
+          <input id="phone" type="tel" name="phone" pattern="[0-9+()\-\s]{8,}" required>
+        </div>
+
+        <div>
+          <label for="portfolio">Optional supporting file</label>
+          <input id="portfolio" type="file" name="portfolio" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
+        </div>
+
+        <div>
+          <label for="comments">What should we improve?</label>
+          <textarea id="comments" name="comments" rows="4" maxlength="500" required></textarea>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="consent" required>
+            I agree that my responses may be used to improve the course.
+          </label>
+        </div>
+
+        <div>
+          <button type="submit">Send questionnaire</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Questions about this questionnaire?</h2>
+      <p>Email <a href="mailto:course@example.edu">the course team</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Experience Project</p>
+  </footer>
+</body>
+</html>

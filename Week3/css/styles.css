@@ -3,9 +3,8 @@
    Use the exact values in the Student Assignment Guide. */
 
 /* 1. Universal box sizing */
-*,
-*::before,
-*::after {
+
+ *{
    box-sizing: border-box;
 }
 
@@ -58,15 +57,6 @@ main {
 a[aria-current="page"] {
    color: white;
    background: #2F6FED;
-}
-
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-   outline: 3px solid #BFDBFE;
-   outline-offset: 2px;
 }
 
 /* 4. Cards, including the element with both card and featured classes */
